@@ -4,6 +4,20 @@ This service automates MPROP property data ingestion into Google BigQuery.
 
 When a CSV file is uploaded to a Google Cloud Storage bucket, an Eventarc event invokes this Cloud Run service. The service uses the uploaded filename to determine the destination table, then loads the CSV data into the `mke_rag_demo` BigQuery dataset using the schema already defined on that table.
 
+# Related Repos
+
+Terraform
+https://github.com/bkelly0/gcp-mke-rag-terraform
+
+CSV Ingestion Service
+https://github.com/bkelly0/mke-property-rag-csv-listener
+
+PDF Vector Embedding Ingestion Service
+https://github.com/bkelly0/mke-demo-rag-event-handler
+
+Property Geocoding Service
+https://github.com/bkelly0/mke-property-rag-geocode
+
 ## Ingestion flow
 
 1. A CSV file is uploaded to Google Cloud Storage.
